@@ -1,14 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
+import { Grid } from "semantic-ui-react";
 import "./App.css";
-import Login from "../components/Auth/Login";
-import "semantic-ui-css/semantic.min.css";
-import Register from "./Auth/Register";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-class App extends Component {
-  render() {
-    return <div>App</div>;
-  }
-}
+import ColorPanel from "./ColorPanel/ColorPanel";
+import SidePanel from "./SidePanel/SidePanel";
+import Messages from "./Messages/Messages";
+import MetaPanel from "./MetaPanel/MetaPanel";
+
+const App = () => (
+  <Grid columns="equal" className="app" style={{ background: "#eee" }}>
+    <ColorPanel />
+    <SidePanel />
+
+    <Grid.Column style={{ marginLeft: 320 }}>
+      <Messages />
+    </Grid.Column>
+
+    <Grid.Column width={4}>
+      <MetaPanel />
+    </Grid.Column>
+  </Grid>
+);
 
 export default App;
