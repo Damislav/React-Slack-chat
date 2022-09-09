@@ -6,15 +6,13 @@ body,
   padding: 1em;
 }
 
-/* Messages */
-
+/* Messages.js */
 .messages {
   height: 440px;
   overflow-y: scroll;
 }
 
-/* MessageForm */
-
+/* MessageForm.js */
 .message__form {
   position: fixed !important;
   bottom: 1em;
@@ -22,4 +20,14 @@ body,
   left: 0;
   right: 1em;
   z-index: 200;
+}
+
+/* Message.js */
+.message__self {
+  border-left: 2px solid orange;
+  padding-left: 8px;
+}
+
+.message__image {
+  padding: 1em;
 }
